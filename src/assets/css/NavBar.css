@@ -1,0 +1,19 @@
+.nav-container {
+    background-color: red;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.anchor-nav{
+    color: whitesmoke;
+    font-size:small;
+    text-decoration: none;
+    cursor: pointer
+}
+
+.logo{
+    width: 30px;
+}
