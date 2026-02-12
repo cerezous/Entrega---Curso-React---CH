@@ -1,8 +1,8 @@
+import { FaCartShopping } from "react-icons/fa6";
 const CardWidget = () => {
     return (
         <div>
-            <span>🛒</span>
-            <span style= {{colro:'red', fontWeight:'bold'}}> 8</span>
+            <FaCartShopping fontSize={'1.2rem'} color='red'/>
         </div>
 
     )
