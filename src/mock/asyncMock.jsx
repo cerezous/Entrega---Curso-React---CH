@@ -1,8 +1,8 @@
-const productos = [
-    {
+export const productos = [
+/*    {
         id: '01',
         name: 'Napolitana',
-        description: "",
+        description: "Pizza clásica con salsa de tomate, mozzarella y rodajas de tomate fresco. Orégano y aceite de oliva. La favorita de la casa.",
         stock: 20,
         price: 12990,
         category: 'pizzas',
@@ -12,17 +12,17 @@ const productos = [
     {
         id: '02',
         name: 'Pepperoni',
-        description: "",
+        description: "Salsa de tomate, mozzarella y abundante pepperoni. Picante y sabrosa, ideal para los amantes del fiambre.",
         stock: 15,
         price: 11990,
         category: 'pizzas',
         img: 'https://i.postimg.cc/rFR1CZmD/pepperoni.png'
     },
-
+*/
     {
         id: '03',
         name: 'Todas las carnes',
-        description: "",
+        description: "Para los más hambrientos: jamón, pepperoni, carne molida y bacon sobre base de salsa y mozzarella. Todo en una.",
         stock: 25,
         price: 14990,
         category: 'pizzas',
@@ -32,7 +32,7 @@ const productos = [
     {
         id: '04',
         name: 'Coca Cola 1.5 lt',
-        description: "",
+        description: "Coca Cola 1,5 litros. Bebida gaseosa clásica, ideal para acompañar tu pizza.",
         stock: 30,
         price: 3200,
         category: 'bebidas',
@@ -42,7 +42,7 @@ const productos = [
     {
         id: '05',
         name: 'Fanta 1.5 lt',
-        description: "",
+        description: "Fanta 1,5 litros. Refresco sabor naranja, sin cafeína. Perfecta para chicos y grandes.",
         stock: 30,
         price: 3200,
         category: 'bebidas',
@@ -52,7 +52,7 @@ const productos = [
     {
         id: '06',
         name: 'Sprite 1.5 lt',
-        description: "",
+        description: "Sprite 1,5 litros. Gaseosa con sabor a lima y limón, liviana y refrescante.",
         stock: 30,
         price: 3200,
         category: 'bebidas',

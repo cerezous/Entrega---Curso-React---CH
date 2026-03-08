@@ -1,16 +1,56 @@
-# React + Vite
+![app](/public/App.png)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Cerezos Pizza App
 
-Currently, two official plugins are available:
+Proyecto final del curso de React JS. Aplicación de e-commerce para venta de pizzas y bebidas.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Instalación
 
-## React Compiler
+1. Clonar el repositorio.
+2. Abrir la terminal en la carpeta del proyecto.
+3. Ejecutar `npm install` para instalar las dependencias.
+4. Ejecutar `npm run dev` para iniciar la app.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tecnologías
 
-## Expanding the ESLint configuration
+- **React** (Vite)
+- **React Router** – Navegación SPA
+- **Context API** – Estado global del carrito
+- **Firebase / Firestore** – Base de datos (productos y órdenes)
+- **Bootstrap / React Bootstrap** – Estilos y componentes
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Librerías utilizadas
+
+- **react** – Core de React (componentes, hooks)
+- **react-dom** – Renderizado en el navegador
+- **react-router-dom** – Navegación SPA (rutas, enlaces, `useParams`)
+- **Firebase** – Conexión a Firestore (productos, órdenes)
+- **bootstrap** – Estilos CSS (grid, utilidades, componentes base)
+- **react-bootstrap** – Componentes de UI (Navbar, Spinner, Badge, Modal, etc.)
+- **react-icons** – Iconos (ej. carrito en CartWidget)
+- **react-hook-form** – Validación del formulario de Checkout (campos requeridos, email, coincidencia de correos)
+- **sileo** – Notificaciones toast: éxito al agregar al carrito (derecha), info/error al finalizar compra (centro). Fondo negro y tamaño ampliado.
+- **react-confirm** – Diálogo de confirmación antes de enviar la orden (“¿Confirmar compra?”) con botones Aceptar/Cancelar (modal Bootstrap).
+
+*Entorno de desarrollo:* Vite, ESLint (y plugins para React).
+
+## Estructura principal
+
+- **App**: rutas, `CartProvider` y `Toaster` de Sileo.
+- **NavBar**: enlaces a Inicio, categorías (Pizzas, Bebidas) y Carrito. Incluye **CartWidget** con cantidad de ítems.
+- **ItemListContainer / ItemList / Item**: listado de productos desde Firestore (por categoría o todos).
+- **ItemDetailContainer / ItemDetail / ItemCount**: detalle de producto, selector de cantidad (mínimo 1, máximo stock). Al agregar al carrito se oculta `ItemCount`, se muestra “Ir al carrito” y un toast de éxito (derecha).
+- **CartContainer / CartView**: contenido del carrito (ítems, cantidades, subtotales, total). **EmptyCart** cuando no hay ítems.
+- **Checkout**: formulario validado con react-hook-form. Diálogo de confirmación (react-confirm) antes de enviar. Al confirmar, orden a Firestore y notificación info/error en el centro. Se muestra el **id de la orden** al finalizar.
+- **ConfirmCompra**: modal de confirmación (react-confirm + Bootstrap) reutilizable.
+
+## Firebase
+
+- Colección **productos**: listado del catálogo (consultas desde React).
+- Colección **orders**: un documento por cada compra confirmada (comprador, carrito, total, fecha).
+
+Las variables de configuración de Firebase están en `src/service/firebase.jsx`.
+
+---
+
+Alumno: Matias Cerezo Prado

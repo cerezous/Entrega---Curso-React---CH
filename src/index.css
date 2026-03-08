@@ -1,7 +1,49 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
-  font-weight: 100;
+}
+
+:root {
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  font-weight: 400;
+  --card-radius: 1rem;
+  --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --card-shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.1);
+  --transition: 0.2s ease;
+}
+
+body {
+  background-color: #f5f5f7;
+  color: #1d1d1f;
+}
+
+/* Botones capsulares en toda la app */
+.btn-pill,
+.btn.rounded-pill {
+  border-radius: 9999px !important;
+  padding-left: 1.25rem !important;
+  padding-right: 1.25rem !important;
+  font-weight: 500;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.btn-pill:hover,
+.btn.rounded-pill:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Cards modernas */
+.card-modern {
+  border-radius: var(--card-radius);
+  border: none;
+  box-shadow: var(--card-shadow);
+  transition: box-shadow var(--transition), transform var(--transition);
+  overflow: hidden;
+}
+
+.card-modern:hover {
+  box-shadow: var(--card-shadow-hover);
+  transform: translateY(-2px);
 }

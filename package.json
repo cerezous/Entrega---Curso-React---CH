@@ -11,11 +11,15 @@
   },
   "dependencies": {
     "bootstrap": "^5.3.8",
+    "firebase": "^12.10.0",
     "react": "^19.2.0",
     "react-bootstrap": "^2.10.10",
+    "react-confirm": "^0.5.0",
     "react-dom": "^19.2.0",
+    "react-hook-form": "^7.71.2",
     "react-icons": "^5.5.0",
-    "react-router-dom": "^7.13.0"
+    "react-router-dom": "^7.13.0",
+    "sileo": "^0.1.5"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",
@@ -26,6 +30,6 @@
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.4.24",
     "globals": "^16.5.0",
-    "vite": "^7.2.4"
+    "vite": "^7.3.1"
   }
 }
