@@ -4,6 +4,8 @@
 
 Proyecto final del curso de React JS. Aplicación de e-commerce para venta de pizzas y bebidas.
 
+**Demo (entrega final):** [https://entrega-curso-react-ch.vercel.app/](https://entrega-curso-react-ch.vercel.app/)
+
 ## Instalación
 
 1. Clonar el repositorio.
