@@ -54,8 +54,7 @@ const Checkout = () => {
           position: 'top-center'
         })
       })
-      .catch((err) => {
-        console.log(err)
+      .catch(() => {
         sileo.error({
           title: 'Error',
           description: 'No se pudo procesar la compra. Intenta de nuevo.',

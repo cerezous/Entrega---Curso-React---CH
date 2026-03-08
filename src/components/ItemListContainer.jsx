@@ -1,17 +1,14 @@
 import { useEffect, useState } from "react"
 import ItemList from "./ItemList"
-import { getProducts } from "../mock/asyncMock"
 import { useParams } from "react-router-dom"
 import Loader from "./Loader"
-import { collection, getDocs, query, where, addDoc } from "firebase/firestore"
+import { collection, getDocs, query, where } from "firebase/firestore"
 import { db } from "../service/firebase"
-import { productos } from "../mock/asyncMock"
 
-const ItemListContainer = ({mensaje}) => {
+const ItemListContainer = ({ mensaje }) => {
     const [data, setData] = useState([])
-    const [loading, setLoading]= useState(false)
+    const [loading, setLoading] = useState(false)
     const { category } = useParams()
-    console.log('ItemListContainer')
 
     // Función para generar el mensaje dinámico
     const getMensaje = () => {
@@ -45,19 +42,10 @@ const ItemListContainer = ({mensaje}) => {
             })
             setData(list)
         })
-        .catch((error)=> console.log(error))
-        .finally(()=> setLoading(false))
-    },[category])
+        .catch((err) => console.error(err))
+        .finally(() => setLoading(false))
+    }, [category])
 
-    const subirData = () => {
-        const col = collection(db, "productos")
-        const sinId = ({ name, description, stock, price, category, img }) => ({
-            name, description, stock, price, category, img
-        })
-        Promise.all(productos.map((prod) => addDoc(col, sinId(prod))))
-            .then(() => alert("Productos subidos correctamente. Recargá la página."))
-            .catch((err) => console.error("Error al subir:", err))
-    }
     return (
         <>
             {loading ? (

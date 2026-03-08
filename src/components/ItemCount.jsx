@@ -1,8 +1,7 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
-const ItemCount = ({stock, onAdd}) => {
-const [count, setCount] = useState(1)
-console.log('ItemCount')
+const ItemCount = ({ stock, onAdd }) => {
+    const [count, setCount] = useState(1)
 
 const sumar = () => {
     if(count < stock){
